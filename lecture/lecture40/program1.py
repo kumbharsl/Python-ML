@@ -1,3 +1,3 @@
-fileObj  = open("Incubators.txt","r+")
+fileObj  = open("Incubators.txt","")
 
 print(fileObj.read())
