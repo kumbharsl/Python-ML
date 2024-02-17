@@ -120,8 +120,42 @@ def signin():
         screen.geometry('1000x500+100+50' )
         screen.config(bg='white')
         
-        Label(screen,text='Hello Everyone!',bg='#fff',font=('Calibri',50,'bold')).pack(expand=True)
-        
+        # Label(screen,text='Hello Everyone!',bg='#fff',font=('Calibri',50,'bold')).pack(expand=True)
+        def demo():
+            pass
+        my_menu = Menu(screen)
+        screen.config(menu=my_menu)
+
+        file_menu = Menu(my_menu)
+        my_menu.add_cascade(label="File", menu=file_menu)
+        file_menu.add_cascade(label="New",command=demo)
+        file_menu.add_separator()
+        file_menu.add_cascade(label="Open",command=demo)
+        file_menu.add_separator()
+        file_menu.add_cascade(label="Save",command=demo)
+        file_menu.add_separator()
+        file_menu.add_cascade(label="Save As",command=demo)
+
+        edit_menu = Menu(my_menu)
+        my_menu.add_cascade(label="Edit", menu=edit_menu)
+        edit_menu.add_cascade(label="Copy", command=demo)
+        edit_menu.add_separator()
+        edit_menu.add_cascade(label="Cut", command=demo)
+
+
+        format_menu = Menu(my_menu)
+        my_menu.add_cascade(label="Format", menu=format_menu)
+        format_menu.add_cascade(label="Size", command=demo)
+        format_menu.add_separator()
+        format_menu.add_cascade(label="Color", command=demo)
+
+        view_menu = Menu(my_menu)
+        my_menu.add_cascade(label="View", menu=view_menu)
+
+        help_menu = Menu(my_menu)
+        my_menu.add_cascade(label="Help", menu=help_menu)
+
+                
         screen.mainloop()
     
     elif username != 'admin' and password !='1234':
