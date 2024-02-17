@@ -5,7 +5,7 @@ root =Tk()
 root.title('Login')
 root.geometry( '1000x500+100+50' )
 root.configure(bg= 'white')
-root.resizable(False, False)
+# root.resizable(False, False)
 
 def signup():
     screen=Toplevel(root)
