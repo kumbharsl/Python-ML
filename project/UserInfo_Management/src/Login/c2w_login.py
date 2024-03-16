@@ -21,7 +21,7 @@ class LoginWindow(QWidget):
         
         #Creating outer widget for login  window frame
         self.outerWidgetLogin= QWidget()
-        self.outerWidgetLogin.setStyleSheet("background:#f9f9fc; max-height:600px; max-width:400px; border-radius:15px; margin-left:160px")
+        self.outerWidgetLogin.setStyleSheet("background:#f9f9fc; max-height:650px; max-width:400px; border-radius:15px; margin-left:160px")
         
         #Loading logo image
         pixmap = QPixmap("./assets/image.png")
@@ -66,6 +66,11 @@ class LoginWindow(QWidget):
         self.submitBtn.setStyleSheet("background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #013565, stop:1 #057be7);width:350px; font-size:20px; color:#ffffff; margin-top:50px")
         self.submitBtn.enterEvent = self.on_enter_btn
         self.submitBtn.leaveEvent = self.on_leave_btn
+        
+        self.inputFeildHolder = QVBoxLayout()
+        self.inputFeildHolder.addWidget(self.userEmailLabel)
+        self.inputFeildHolder.addWidget(self.userPassLabel)
+        self.inputFeildHolder.addWidget(self.submitBtn)
         
         # Adding UI elements to outer layout
         outer_layout.addWidget(self.image_label)
