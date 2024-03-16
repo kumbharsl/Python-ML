@@ -20,7 +20,7 @@ class LoginWindow(QWidget):
         self.layout = QVBoxLayout()
         
         #Creating outer widget for login  window frame
-        self.outerWidgetLogin= QWidget
+        self.outerWidgetLogin= QWidget()
         self.outerWidgetLogin.setStyleSheet("background:#f9f9fc; max-height:600px; max-width:400px; border-radius:15px; margin-left:160px")
         
         #Loading logo image
@@ -47,7 +47,6 @@ class LoginWindow(QWidget):
         #Creating UI elemets
         self.heading = QLabel("Core2web")
         self.heading.setAlignment(Qt.AlignTop | Qt.AlignHCenter)
-        self.heading.setStyleSheet()
         self.heading.setStyleSheet("font-size:25px; font-weight:500; margin-top:20px; height:60px; font-family:Poppins")
         self.pageHeading=QLabel("Login")
         self.pageHeading.setAlignment(Qt.AlignCenter)
@@ -71,7 +70,7 @@ class LoginWindow(QWidget):
         # Adding UI elements to outer layout
         outer_layout.addWidget(self.image_label)
         outer_layout.addWidget(self.pageHeading)
-        outer_layout.addLayout(self.inputFeildHolder)
+        outer_layout.addLayout(self.inputFeildHolder)        
         self.formLayout = QVBoxLayout()
         outer_layout.addLayout(self.formLayout)
         outer_layout.setAlignment(Qt.AlignHCenter)
