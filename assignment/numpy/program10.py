@@ -1,3 +1,10 @@
+# Write a program to check if a given 2D NumPy array contains any duplicate rows.
+
+# Example 1
+# Input: array = np.array([[1, 2, 3],
+#                          [4, 5, 6],
+#                          [7, 8, 9]])
+# Output:No
 import numpy as np
 def has_duplicate_rows(array):
     row_strings = ["".join(map(str, row)) for row in array]
