@@ -6,7 +6,6 @@
 #                          [7, 8, 9]])
 # value = 2
 # Output: 1
-
 import numpy as np
 def count_occurrences(array, value):
     occurrences = np.count_nonzero(array == value)
