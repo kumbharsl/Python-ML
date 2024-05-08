@@ -9,8 +9,12 @@ def altSum(arr):
     return sumEle
 row = int(input("Enter number of rows:"))
 col = int(input("Enter number of columns:"))
-arr = [[1,2,3],[4,5,6],[7,8,9]]
+arr = [[1,2,3],
+       [4,5,6],
+       [7,8,9]]
+
 print("Enter elements row-wise:")
+
 for i in range(row):
     for j in range(col):
         arr[i][j] = int(input())
