@@ -3,7 +3,7 @@ def altSum(arr):
     sumEle = 0
     for i in range(len(arr)):
         for j in range(len(arr[i])):
-            if (i + j) % 2 == 0: # Check if the sum of indices is even
+            if (i + j) % 2 == 0:
                 sumEle += arr[i][j]
 
     return sumEle
@@ -19,4 +19,4 @@ for i in range(row):
     for j in range(col):
         arr[i][j] = int(input())
         sumEle = altSum(arr)
-        print("Alternate Sum:", sumEle)
+        print("Alternate Sum:", sumEle+1)
